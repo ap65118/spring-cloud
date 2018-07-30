@@ -3,9 +3,16 @@ server:
 spring:
   application:
     name: order
+  rabbitmq:
+    host: 192.168.10.88 
+    username: lee
+    password: 123
+    port: 5672
+management:
+  security:
+    enabled: false
 eureka:
   client:
     service-url:
       defaultZone: http://eurekaserver1:8000/eureka
-    instance-id: ${spring.application.name}:${sever.port}   
-env: dev
+    instance-id: ${spring.application.name}:${sever.port} 
